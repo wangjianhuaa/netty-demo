@@ -1,4 +1,4 @@
-package com.demo.netty.aio;
+package com.demo.netty.aio.channel;
 
 import java.nio.ByteBuffer;
 import java.nio.channels.AsynchronousSocketChannel;
