@@ -15,6 +15,11 @@ public class BioServer extends Thread {
 
     private ServerSocket serverSocket = null;
 
+    public static void main(String[] args) {
+        BioServer bioServer = new BioServer();
+        bioServer.start();
+    }
+
     @Override
     public void run() {
         try
@@ -24,7 +29,7 @@ public class BioServer extends Thread {
             System.out.println("netty demo start done.");
             while (true){
                 Socket socket = serverSocket.accept();
-                BioServerHandler handler = new BioServerHandler(socket, StandardCharsets.UTF_8);
+                BioServerHandler handler = new BioServerHandler(socket, Charset.forName("GBK"));
                 handler.start();
             }
         }
