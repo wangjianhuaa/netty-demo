@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>netty-1-00</module>
+        <module>netty-1-01</module>
     </modules>
     <groupId>com.test</groupId>
     <artifactId>netty</artifactId>
