@@ -12,6 +12,7 @@
         <module>netty-1-05</module>
         <module>netty-1-06</module>
         <module>netty-1-07</module>
+        <module>netty-1-08</module>
     </modules>
     <groupId>com.test</groupId>
     <artifactId>netty</artifactId>
