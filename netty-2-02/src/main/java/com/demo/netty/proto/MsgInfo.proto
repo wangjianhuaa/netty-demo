@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package com.demo.netty.domain;
+
+option java_package = "com.demo.netty.domain";
+option java_multiple_files = true;
+option java_outer_classname = "MsgInfo";
+
+message MsgBody{
+
+    String channelId = 1;
+    String msgInfo = 2;
+}
