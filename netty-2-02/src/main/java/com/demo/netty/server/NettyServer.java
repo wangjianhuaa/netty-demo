@@ -7,7 +7,6 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.channel.socket.nio.NioSocketChannel;
 
 /**
  * @author wangjianhua
@@ -34,7 +33,7 @@ public class NettyServer {
                     .channel(NioServerSocketChannel.class)
                     .option(ChannelOption.SO_BACKLOG,128)
                     .childHandler(new MyChannelInitializer());
-            ChannelFuture f = b.bind(port);
+            ChannelFuture f = b.bind(port).sync();
             System.out.println("netty demo 2-02 protobuf start done.");
             f.channel().closeFuture().sync();
         }

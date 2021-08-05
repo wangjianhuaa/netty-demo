@@ -5,6 +5,7 @@ import com.demo.netty.util.MsgUtil;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelOption;
+import io.netty.channel.DefaultChannelPromise;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
@@ -27,11 +28,11 @@ public class NettyClient {
         try
         {
             Bootstrap b = new Bootstrap();
-            b.group(workerGroup)
-                    .channel(NioSocketChannel.class)
-                    .option(ChannelOption.AUTO_READ,true)
-                    .handler(new MyChannelInitializer());
-            ChannelFuture f = b.bind(inetHost, inetPort).sync();
+            b.group(workerGroup);
+                    b.channel(NioSocketChannel.class)
+                        .option(ChannelOption.AUTO_READ,true)
+                        .handler(new MyChannelInitializer());
+            ChannelFuture f = b.connect(inetHost, inetPort).sync();
             System.out.println("netty demo 2-02 protobuf处理数据 start done.");
             f.channel().writeAndFlush(MsgUtil.buildMsg(f.channel().id().toString(),"" +
                     "你好，使用protobuf通信格式的服务端，我是测试用例"));

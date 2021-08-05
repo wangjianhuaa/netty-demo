@@ -1,6 +1,7 @@
 package com.demo.netty.client.handler;
 
 import com.demo.netty.domain.MsgBody;
+import com.demo.netty.util.MsgUtil;
 import com.googlecode.protobuf.format.JsonFormat;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -26,7 +27,7 @@ public class MyClientHandler extends ChannelInboundHandlerAdapter {
         System.out.println("连接报告完毕");
         //通知客户端连接建立成功
         String str = "通知 服务端连接建立成功"+""+new Date()+""+channel.localAddress().getHostString();
-        ctx.writeAndFlush(str);
+        ctx.writeAndFlush(MsgUtil.buildMsg(channel.id().toString(),str));
     }
 
 
