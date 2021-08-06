@@ -20,6 +20,7 @@
         <module>netty-2-01</module>
         <module>netty-2-02</module>
         <module>netty-2-03</module>
+        <module>netty-2-04</module>
     </modules>
     <groupId>com.test</groupId>
     <artifactId>netty</artifactId>
