@@ -32,7 +32,7 @@ public class FileUtil {
         //文件记录指针位置
         randomAccessFile.seek(readPosition);
         //规定 1024默认读取范围
-        byte[] bytes = new byte[1024];
+        byte[] bytes = new byte[1024*100];
         int readSize = randomAccessFile.read(bytes);
         //如果没读到数据 返回已完成
         if(readSize < 0){

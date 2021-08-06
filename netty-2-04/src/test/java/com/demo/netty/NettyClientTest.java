@@ -19,7 +19,7 @@ public class NettyClientTest {
         ChannelFuture channelFuture = new NettyClient().connect("127.0.0.1",7397);
 
         //文件信息{文件大于1024kb可以方便断点续传}
-        File file  = new File("C:\\Users\\wangjianhua\\Desktop\\spring文档.zip");
+        File file  = new File("C:\\Users\\wangjianhua\\Desktop\\字节码编程-小傅哥(公众号：bugstack虫洞栈).pdf");
         FileTransferProtocol fileTransferProtocol =
                 MsgUtil.buildRequestTransferFile(file.getAbsolutePath(), file.getName(), file.length());
 

@@ -50,7 +50,7 @@ public class MyClientHandler extends ChannelInboundHandlerAdapter {
         //0 传输文件请求 1 传输文件指令 2传输文件数据
         switch (fileTransferProtocol.getTransferType()) {
             case 1:
-                FileBurstInstruct fileBurstInstruct = (FileBurstInstruct) ((FileTransferProtocol) msg).getTransferObj();
+                FileBurstInstruct fileBurstInstruct = (FileBurstInstruct) fileTransferProtocol.getTransferObj();
                 //Constants.FileStatus ｛0开始、1中间、2结尾、3完成｝
                 if (Constants.FileStatus.COMPLETE == fileBurstInstruct.getStatus()) {
                     ctx.flush();
