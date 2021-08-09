@@ -2,8 +2,11 @@
 @author wangjianhua
 @date 2021/08/09 16:41:56
 --%>
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <title>netty-demo-2-05 微信界面demo</title>
+<%--   如果多模块访问不到自己的jsp，那么就要注意修改idea的configuration
+     在working dectionary中修改为$MODULE_WORKING_DIR$
+     --%>
 
 <script type="text/javascript" src="res/js/jquery.min.js"></script>
 <script type="text/javascript" src="res/js/jquery.serialize-object.min.js"></script>
@@ -11,7 +14,7 @@
 
 <style>
     body{
-        background-image: url("res/img/bg.jpg");
+        background-image: url(res/img/bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         font-family: "微软雅黑", serif;
@@ -35,14 +38,15 @@
 </head>
 
 <body>
+<div id="chatDiv">
     <%--左边的dev--%>
     <div style="width: 60px; height: 667px; background-color: #2D2B2A; float: left;">
-    <%--    头像    --%>
+        <%--    头像    --%>
         <div style="width: 35px; height: 35px; margin:0 auto; margin-top: 19px;margin-left: 12px; float: left;  border: 1px solid #666666; border-radius: 3px; -moz-border-radius: 3px">
-            <img src="res/img/bugstack.png" width="35px" height="35px"/>
+            <img src="res/img/avatar.png" width="35px" height="35px"/>
         </div>
 
-    <%--    聊天    --%>
+        <%--    聊天    --%>
         <div style="width: 28px; height: 28px; margin:0 auto; margin-top: 25px; margin-left: 16px; float: left">
             <img src="res/img/chat.png" width="35px" height="35px">
         </div>
@@ -185,7 +189,7 @@
                 </div>
 
                 <div class="msgBlock_channelId" style="float:left; width:100px; margin-top:-5px; margin-left:10px; padding-bottom:2px; font-size:10px;">
-                    bugstack虫洞栈
+                    测试的demo
                 </div>
 
                 <div class="msgBlock_msgInfo" style="height:auto;width:280px;float:left;margin-left:12px; margin-top:4px;border-radius:3px;-moz-border-radius:3px; ">
@@ -194,8 +198,8 @@
                         author:wangjianhua email:wangjianhuabox@163.com
                         使用源码地址:bugstack
                         <br/><br/>
-                        111
-                        <br/><br/>222 <hr/><img width="260" height="260" src="res/img/gzh.jpg" />
+                        测试1
+                        <br/><br/>测试2<hr/><img width="260" height="260" src="res/img/gzh.jpg" />
                     </div>
                 </div>
             </div>
@@ -245,6 +249,6 @@
             <div style="margin-top:20px; float:right; margin-right:35px; padding:5px; padding-left:15px; padding-right:15px; font-size:12px; background-color:#F5F5F5;border-radius:3px;-moz-border-radius:3px; cursor:pointer;" onclick="javascript:util.send();">发送(S)</div>
         </div>
     </div>
-
+</div>
 </body>
 </html>
