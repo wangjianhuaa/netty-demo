@@ -14,6 +14,7 @@
     <modules>
         <module>demo-rpc-01</module>
         <module>demo-rpc-02</module>
+        <module>demo-rpc-03</module>
     </modules>
 
 
