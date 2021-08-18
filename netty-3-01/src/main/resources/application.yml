@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/
+
+netty:
+  socket:
+    port: 7397
+  websocket:
+    port: 7398
