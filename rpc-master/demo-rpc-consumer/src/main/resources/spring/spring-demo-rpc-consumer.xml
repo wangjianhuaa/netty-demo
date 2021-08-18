@@ -5,6 +5,8 @@
 	  http://com.demo/schema/rpc http://com.demo/schema/rpc/rpc.xsd">
 
 
-    <rpc:server id="test_server" host="127.0.0.1" port="6379"/>
+    <rpc:server id="consumer_demo" host="127.0.0.1" port="6379"/>
+
+    <rpc:consumer id="helloService" nozzle="com.demo.rpc.provider.export.HelloService" alias="demoRpc"/>
 
 </beans>

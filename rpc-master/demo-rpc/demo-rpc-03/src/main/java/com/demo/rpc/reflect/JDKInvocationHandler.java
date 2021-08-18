@@ -31,7 +31,7 @@ public class JDKInvocationHandler implements InvocationHandler {
             return request.toString();
         }
         //hashcode方法
-        else if("hashcode".equals(methodName) && parameterTypes.length == 0)
+        else if("hashCode".equals(methodName) && parameterTypes.length == 0)
         {
             return request.hashCode();
         }

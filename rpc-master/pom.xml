@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>demo-rpc</module>
+        <module>demo-rpc-consumer</module>
+        <module>demo-rpc-provider</module>
     </modules>
 
 

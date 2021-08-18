@@ -44,6 +44,12 @@ public class RedisRegistryCenter {
         return jedis.sadd(nozzle + "_" + alias, info);
     }
 
+    /**
+     * 获取生产者 模拟权重 随机获取
+     * @param nozzle 接口名称
+     * @param alias 别名
+     * @return 生产者
+     */
     public static String obtainProvider(String nozzle, String alias) {
         return jedis.srandmember(nozzle + "_" + alias);
     }
